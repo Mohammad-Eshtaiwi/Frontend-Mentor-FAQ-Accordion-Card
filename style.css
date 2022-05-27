@@ -225,6 +225,10 @@ main .bg>* {
         z-index: 1;
         transform: translate(-50%, 28%);
     }
+
+    .d-block-lg {
+        display: block;
+    }
 }
 
 
@@ -324,6 +328,10 @@ main .bg::before {
         padding-top: 30rem;
     }
 
+    .d-block-lg {
+        display: none;
+    }
+
     main {
         display: block;
     }
@@ -363,5 +371,12 @@ main .bg::before {
     body {
         padding-top: 15rem;
         /* padding-top: 20%; */
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .faq__accordion__item label {
+        padding-right: 1.8rem;
     }
 }
