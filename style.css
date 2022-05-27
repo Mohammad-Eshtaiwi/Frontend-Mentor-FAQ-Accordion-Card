@@ -202,6 +202,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     transition: height .35s ease-in-out;
+    border-radius: 23px;
 }
 
 
