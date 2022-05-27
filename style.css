@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* font-family: 'Kumbh Sans', sans-serif; */
+/* basic reset */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    font-size: 10px;
+}
+
+
+
+
+/* variables */
+:root {
+    --heading-large-size: 2.8rem;
+    --heading-medium-size: 15rem;
+    --body-font-size: 1.5rem;
+    --rating-font-size: 1.5rem;
+
+    --primary-color: #666CA3;
+    --blue: #4D96A9;
+    --blue-bg-o: rgba(77, 150, 169, .8);
+    --blue-o: #71C0D4;
+    --blue-light: #8FE3F9;
+    --dark-blue: #13183F;
+    --grey: #E8E8EA;
+    --lailake: #855FB1;
+    --lailake-o: #B18BDD;
+    --lailake-light: #D9B8FF;
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --gradient--to-blue: linear-gradient(180deg, #4851FF 0%, #F02AA6 99.92%);
+    --gradient--to-blue-o: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+    --gradient-to-orange: linear-gradient(180deg, #FF6F48 0.04%, #F02AA6 100%);
+    --gradient-to-orange-o: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    --White: #FAFAFA;
+    --dark: #28283D;
+    --bg: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+}
+
+
+
+/* basic */
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    background-image: var(--bg);
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    color: #4B4C5F;
+    padding: 2vh 2vw;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding-block: 6rem;
+}
+
+p {
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-size: 1.8rem;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+label,
+.heading {
+    color: #1E1F36;
+}
+
+/* typography */
+
+/* paragraph */
+.paragraph-sm {
+    font-size: 1.6rem;
+}
+
+/* headings */
+.heading {
+    font-weight: 700;
+}
+
+
+h2.heading,
+h1.heading {
+    font-size: 4rem;
+    line-height: 4.4rem;
+}
+
+
+/* btn */
+
+.btn {
+    padding: 1.4rem 3.2rem;
+    border-radius: 29px;
+    transition: all .35s ease-in-out;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.btn__span {
+    color: var(--White);
+}
+
+
+.btn-lailake {
+    background-color: var(--lailake);
+    color: var(--lailake-light)
+}
+
+.btn-lailake:hover {
+    background-color: var(--lailake-o);
+}
+
+.btn-blue {
+    background-color: var(--blue);
+    color: var(--blue-light);
+}
+
+.btn-blue:hover {
+    background-color: var(--blue-o);
+}
+
+/* common */
+
+.container {
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:1110px) {
+    .container {
+        padding-inline: 3vw;
+    }
+}
+
+.d-none {
+    display: none;
+}
+
+/* components */
+
+
+/* main */
+
+main {
+    max-width: 920px;
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    /* padding-top: 6.5rem;
+    padding-bottom: 8.3rem; */
+    min-height: 50.9rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: height .35s ease-in-out;
+}
+
+
+
+main .bg {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+main .bg>* {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    pointer-events: none;
+}
+
+@media screen and (min-width: 1011px) {
+    main .bg .illustration-box {
+        z-index: 1;
+        transform: translate(-50%, 28%);
+    }
+}
+
+
+main .bg::before {
+    content: "";
+    background-image: url("./images/bg-pattern-desktop.svg");
+    position: absolute;
+    inset: 0 0 0 0;
+    background-position: 114% 70%;
+    background-repeat: no-repeat;
+}
+
+/* faq */
+.faq {
+    padding-block: 6.5rem;
+}
+
+.faq .heading {
+    padding-left: 1.6rem;
+    margin-bottom: 4.3rem;
+}
+
+.faq__accordion input[type="checkbox"] {
+    display: none;
+}
+
+.faq__accordion__item {
+    position: relative;
+    padding-right: 1em;
+    padding: 1.6rem;
+    padding-top: 0;
+    overflow-x: hidden;
+}
+
+.faq__accordion__item {
+    margin-bottom: 1.6rem;
+}
+
+.faq__accordion__item::before {
+    content: "";
+    bottom: 0;
+    width: 100%;
+    background-color: var(--grey);
+    height: 1px;
+    position: absolute;
+}
+
+.faq__accordion__item label {
+    display: flex;
+    cursor: pointer;
+    transition: font-weight .5s ease-in-out, color .35s ease-in-out;
+}
+
+.faq__accordion__item label:hover {
+    color: #F47B56;
+}
+
+.faq__accordion__item img {
+    position: absolute;
+    right: 1em;
+    top: 0;
+    transform: translateY(50%);
+    width: 1.2rem;
+    aspect-ratio: 1/1;
+    pointer-events: none;
+    /* transform: translateY(1em); */
+    transition: all .35s ease-in-out;
+}
+
+.faq__accordion__item p {
+    color: #787887;
+    padding-block: 0;
+    max-height: 0;
+    transform: scaleY(0);
+    overflow: hidden;
+    transition: all .35s ease-in-out;
+    transform-origin: top;
+}
+
+.faq__accordion__item input:checked~p {
+    padding-block: 1rem;
+    transform: scaleY(1);
+    overflow: hidden;
+    max-height: unset;
+}
+
+.faq__accordion__item input:checked~label {
+    font-weight: 700;
+}
+
+.faq__accordion__item input:checked~img {
+    transform: translateY(50%) rotate(-180deg);
+}
+
+@media screen and (max-width: 1010px) {
+    body {
+        padding-top: 30rem;
+    }
+
+    main {
+        display: block;
+    }
+
+    main .bg {
+        transform: translateY(33%);
+        width: 70%;
+        margin: 0 auto;
+        margin-top: -50%;
+        padding-bottom: 20%;
+    }
+
+    main .bg::before {
+        content: "";
+        background-position: unset;
+        background-size: 100%;
+        transform: translateY(-18%);
+        clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    }
+
+    .faq .heading {
+        padding-left: 0;
+        margin-bottom: 4.3rem;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 810px) {
+    body {
+        padding-top: 20rem;
+        /* padding-top: 20%; */
+    }
+}
+
+@media screen and (max-width: 610px) {
+    body {
+        padding-top: 15rem;
+        /* padding-top: 20%; */
+    }
+}
