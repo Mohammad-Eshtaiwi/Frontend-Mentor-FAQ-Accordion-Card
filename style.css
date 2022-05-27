@@ -221,13 +221,19 @@ main .bg>* {
 }
 
 @media screen and (min-width: 1011px) {
-    main .bg .illustration-box {
-        z-index: 1;
-        transform: translate(-50%, 28%);
-    }
 
     .d-block-lg {
         display: block;
+    }
+
+    main .bg .illustration {
+        transform: translateX(-16%);
+        clip-path: polygon(16% 0, 100% 0, 100% 100%, 16% 100%);
+    }
+
+    main .bg .illustration-box {
+        z-index: 1;
+        transform: translate(-50%, 28%);
     }
 }
 
